@@ -16,7 +16,7 @@ import german from "../../../images/de.svg"
 import french from "../../../images/fr.svg"
 import greatBritain from "../../../images/gb.svg"
 import spanish from "../../../images/es.svg"
-import Cookies from "js-cookie"
+
 
 
 
@@ -203,67 +203,67 @@ export default function Skills () {
     // session storage
     // const win = window.sessionStorage
 
-    useEffect(() => {
-        if (Cookies.get('showConclusion')) {
-            setShowConclusion(JSON.parse(Cookies.get('showConclusion')))
-        }
-        if (Cookies.get('showTechnicalSkills')) {
-            setShowTechnicalSkills(JSON.parse(Cookies.get('showTechnicalSkills')))
-        }
-        if (Cookies.get('showLanguages')) {
-            setShowLanguages(JSON.parse(Cookies.get('showLanguages')))
-        }
-        if (Cookies.get('showSoftSkills')) {
-            setShowSoftSkills(JSON.parse(Cookies.get('showSoftSkills')))
-        }
-        if (Cookies.get('showBagAndStock')) {
-            setShowBagAndStock(JSON.parse(Cookies.get('showBagAndStock')))
-        }
-        if (Cookies.get('thanksForSoftSkills')) {
-            setThanksForSoftSkills(JSON.parse(Cookies.get('thanksForSoftSkills')))
-        }
-        if (Cookies.get('instructionForSoftSkills')) {
-            setInstructionForSoftSkills(JSON.parse(Cookies.get('instructionForSoftSkills')))
-        }
-    }, [])
+    // useEffect(() => {
+    //     if (Cookies.get('showConclusion')) {
+    //         setShowConclusion(JSON.parse(Cookies.get('showConclusion')))
+    //     }
+    //     if (Cookies.get('showTechnicalSkills')) {
+    //         setShowTechnicalSkills(JSON.parse(Cookies.get('showTechnicalSkills')))
+    //     }
+    //     if (Cookies.get('showLanguages')) {
+    //         setShowLanguages(JSON.parse(Cookies.get('showLanguages')))
+    //     }
+    //     if (Cookies.get('showSoftSkills')) {
+    //         setShowSoftSkills(JSON.parse(Cookies.get('showSoftSkills')))
+    //     }
+    //     if (Cookies.get('showBagAndStock')) {
+    //         setShowBagAndStock(JSON.parse(Cookies.get('showBagAndStock')))
+    //     }
+    //     if (Cookies.get('thanksForSoftSkills')) {
+    //         setThanksForSoftSkills(JSON.parse(Cookies.get('thanksForSoftSkills')))
+    //     }
+    //     if (Cookies.get('instructionForSoftSkills')) {
+    //         setInstructionForSoftSkills(JSON.parse(Cookies.get('instructionForSoftSkills')))
+    //     }
+    // }, [])
 
 
 
 
-    useEffect(() => {
-        Cookies.set('showConclusion', showConclusion.toString())
-        Cookies.set('showTechnicalSkills', showTechnicalSkills.toString())
-        Cookies.set('showLanguages', showLanguages.toString())
-        Cookies.set('showSoftSkills', showSoftSkills.toString())
-        Cookies.set('showBagAndStock', showBagAndStock.toString())
-        Cookies.set('thanksForSoftSkills', thanksForSoftSkills.toString())
-        Cookies.set('instructionForSoftSkills', instructionForSoftSkills.toString())
-    }, [showConclusion, showTechnicalSkills, showLanguages,
-        showSoftSkills, showBagAndStock, thanksForSoftSkills,
-        instructionForSoftSkills])
+    // useEffect(() => {
+    //     Cookies.set('showConclusion', showConclusion.toString())
+    //     Cookies.set('showTechnicalSkills', showTechnicalSkills.toString())
+    //     Cookies.set('showLanguages', showLanguages.toString())
+    //     Cookies.set('showSoftSkills', showSoftSkills.toString())
+    //     Cookies.set('showBagAndStock', showBagAndStock.toString())
+    //     Cookies.set('thanksForSoftSkills', thanksForSoftSkills.toString())
+    //     Cookies.set('instructionForSoftSkills', instructionForSoftSkills.toString())
+    // }, [showConclusion, showTechnicalSkills, showLanguages,
+    //     showSoftSkills, showBagAndStock, thanksForSoftSkills,
+    //     instructionForSoftSkills])
 
-    // DELETE COOKIES
+    // // DELETE COOKIES
 
-    useEffect(() => {
-        const handleBeforeUnload = () => {
-            // Delete cookies here
-            Cookies.remove('showConclusion')
-            Cookies.remove('showTechnicalSkills')
-            Cookies.remove('showLanguages')
-            Cookies.remove('showSoftSkills')
-            Cookies.remove('showBagAndStock')
-            Cookies.remove('thanksForSoftSkills')
-            Cookies.remove('instructionForSoftSkills')
-            // Alternatively, you can delete all cookies using:
-            // Object.keys(Cookies.get()).forEach(cookie => Cookies.remove(cookie));
-        };
+    // useEffect(() => {
+    //     const handleBeforeUnload = () => {
+    //         // Delete cookies here
+    //         Cookies.remove('showConclusion')
+    //         Cookies.remove('showTechnicalSkills')
+    //         Cookies.remove('showLanguages')
+    //         Cookies.remove('showSoftSkills')
+    //         Cookies.remove('showBagAndStock')
+    //         Cookies.remove('thanksForSoftSkills')
+    //         Cookies.remove('instructionForSoftSkills')
+    //         // Alternatively, you can delete all cookies using:
+    //         // Object.keys(Cookies.get()).forEach(cookie => Cookies.remove(cookie));
+    //     };
 
-        window.addEventListener('beforeunload', handleBeforeUnload);
+    //     window.addEventListener('beforeunload', handleBeforeUnload);
 
-        return () => {
-            window.removeEventListener('beforeunload', handleBeforeUnload);
-        };
-    }, []);
+    //     return () => {
+    //         window.removeEventListener('beforeunload', handleBeforeUnload);
+    //     };
+    // }, []);
 
     return (
         <article className='skillContainer'>
