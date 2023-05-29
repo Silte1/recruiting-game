@@ -15,34 +15,34 @@ export default function Kontakt () {
     const [showSuccessMessage, setShowSuccessMessage] = useState(false)
 
 
-    // const postData = async (e) => {
+    const postData = async (e) => {
 
-    //     e.preventDefault();
+        e.preventDefault();
 
-    //     try {
-    //         const response = await fetch(`http://localhost:9000/api/receive-email`, {
+        try {
+            const response = await fetch(`http://localhost:9000/api/receive-email`, {
 
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //             },
-    //             body: JSON.stringify({ sender: email, content: content, name: name }),
-    //             credentials: "include"
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ sender: email, content: content, name: name }),
+                credentials: "include"
 
-    //         });
-    //         if (response.ok) {
-    //             if (response.status === 200) {
-    //                 setShowForm(false)
-    //                 setShowSuccessMessage(true)
-    //             }
-    //         }
-    //         console.log(response)
+            });
+            if (response.ok) {
+                if (response.status === 200) {
+                    setShowForm(false)
+                    setShowSuccessMessage(true)
+                }
+            }
+            console.log(response)
 
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
+        } catch (error) {
+            console.log(error);
+        }
 
-    // };
+    };
 
     const handleSucceed = () => {
         setShowSuccessMessage(false)
@@ -53,7 +53,7 @@ export default function Kontakt () {
     return (
         <article className='contactContainer'>
             <section className='containerBody'>
-                {showForm && <form className='contactForm' action="" method="post" >
+                {showForm && <form className='contactForm' action="" method="post" onSubmit={postData}>
 
                     <div>
                         <label className='contactFormLabel' htmlFor="">Name</label>
