@@ -69,10 +69,12 @@ flex-direction: column;
 justify-content: space-around;
 align-items: center;
 line-height: 1.5;
-
+transition: 350ms;
 }
 
-
+.rewardBox:hover{
+    transform: translateY(-15px);
+}
 
 p.rewardBoxHeader{
 background-color: goldenrod;
