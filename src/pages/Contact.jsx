@@ -27,7 +27,7 @@ export default function Kontakt () {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ sender: email, content: content, name: name }),
-                mode: "cors",
+                mode: "no-cors",
                 credentials: "include"
 
             });
