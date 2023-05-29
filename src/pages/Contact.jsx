@@ -20,7 +20,7 @@ export default function Kontakt () {
         e.preventDefault();
 
         try {
-            const response = await fetch(`http://localhost:9000/api/receive-email`, {
+            const response = await fetch(`https://recruiting-game-api.onrender.com/`, {
 
                 method: "POST",
                 headers: {
