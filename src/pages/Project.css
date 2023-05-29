@@ -1,0 +1,128 @@
+/* PROJECT CONTAINER */
+
+.projectContainer{
+    max-width: 90vw;
+    min-height: 85vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-shrink: none;
+}
+
+/* project */
+
+.project{
+    position: relative;
+}
+
+
+/* project image */
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+  
+  :root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(168, 239, 255, 1);
+	--c2: rgba(168, 239, 255, 0.1);
+}
+
+
+.projectImage{
+    
+
+    width: 20rem;
+    height: 30rem;
+
+    /* From https://css.glass */
+ background: rgba(255, 255, 255, 0.13);
+ border-radius: 16px;
+ /* box-shadow: 10px 15px 1px rgba(0, 0, 0, 0.5); */
+ backdrop-filter: blur(20px);
+ -webkit-backdrop-filter: blur(20px);
+ transition: 300ms;
+ 	margin: max(1rem, 3vw);
+	border: 0.35rem solid;
+	padding: 10px;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+ }
+
+
+.projectImage:hover{
+    width: 21rem;
+    height: 31rem;
+    opacity: 0.7;
+    transform: rotate(5deg);
+}
+
+
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}
+
+/* 
+.seeProject{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    color: white;
+    font-size: 20px;
+    width: fit-content;
+    height: fit-content;
+    padding: 1vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 500ms;
+    opacity: 0;
+}
+
+.seeProject:hover{
+opacity: 1;
+} */
+

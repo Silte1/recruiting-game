@@ -1,0 +1,150 @@
+article.educationContainer{
+    max-width: 90vw;
+    min-height: 85vh;
+    display: grid;
+    grid-template-areas: 
+    'educationBody educationBody educationBody educationBody educationBody'
+    'educationFooter educationFooter educationFooter educationFooter educationFooter';
+    font-size: clamp(16px, 1.4vw, 28px) ;
+}
+
+section.theBodyEducation{
+    max-width: 90vw;
+    min-height: 75vh;
+    grid-area: educationBody;
+    display: grid;
+    grid-template-areas:
+    
+     'educationBodyInstruction'
+     'educationBodyResponseOption'
+     'educationBodyBtn'
+    ;
+}
+
+
+/* .................................................Greetings and instructions..................................................... */
+
+
+.greetingAndInstructionEducation{
+    min-height: 25vh;
+    grid-area: educationBodyInstruction;
+    display: flex;
+   justify-content: center;
+    flex-direction: column;
+    line-height: 1.5;
+    /* outline: 1px solid gray; */
+
+}
+
+
+.greetingAndInstructionEducation .space  {
+margin-bottom: 20px;
+}
+
+.right, .wrong{
+    border-radius: 5px;
+    box-shadow:5px 5px 10px black;
+    filter:drop-shadow(5px 5px 10px black);
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 15px;
+}
+/* .................................................Response options container..................................................... */
+
+
+section.responseAndOptionsContainerEducation {
+    min-height: 30vh;
+    grid-area: educationBodyResponseOption;
+    /* outline: 1px solid gray; */
+}
+
+.responseOptionsBoxEducation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+section.responseOptionsBoxEducation p{
+    min-width: 150px;
+    max-width: 50%;
+    padding: 10px;
+    background-color: black;
+    text-align: center;
+   border: 3px solid white;
+   transition: 300ms;
+   cursor: pointer;
+}
+
+/* .............................................Conclusion.............................................. */
+
+.conclusionEducation{
+line-height: 1.5;
+width: 80%;
+}
+
+.conclusionEducation .space{
+    margin-bottom: 20px;
+}
+/* .............................................error message........................................... */
+
+.errorEducation{
+    height: 14vh;
+    display: flex;
+    align-items: center;
+  
+    grid-area: educationBodyBtn;
+    /* outline: 1px solid red; */
+}
+
+.errorMessageEducation{
+    color: red;
+    
+    margin: 0 auto;
+}
+
+/* .................................................Footer..................................................... */
+
+
+section.btnContainerEducation{
+    max-width: 90vw;
+    min-height: 10vh;
+    grid-area: educationFooter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+
+/* .................................................Btn styles..................................................... */
+
+.btnContainerEducation button, .educationContainer button{
+    display: block;
+    width: 10em;
+    height: 1.6em;
+    border: none;
+    background-color: rgb(177, 105, 246);
+    border-radius: 2em;
+    transition: 400ms;
+    color: white;
+    font-weight: bold;
+    font-size: clamp(16px, 1.3vw, 28px) ;
+
+}
+
+.btnContainerEducation button:hover, .educationContainer button:hover{
+    opacity: 0.7;
+}
+
+
+

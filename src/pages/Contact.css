@@ -1,0 +1,117 @@
+article.contactContainer{
+    max-width: 90vw;
+    min-height: 85vh;
+    display: grid;
+    grid-template-areas: 
+    'theBody theBody theBody theBody theBody'
+    'theFooter theFooter theFooter theFooter theFooter';
+    font-size: clamp(16px, 1.4vw, 28px) ;
+
+}
+
+.containerBody{
+    grid-area: theBody;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contactForm{
+width: 100%;
+width: 30vw;
+min-height: 60vh;
+background-color: blueviolet;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+padding: 1rem 2rem;
+
+color: white;
+border-bottom-right-radius: 30px;
+border-top-left-radius: 30px;
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.3);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+
+/* align-items: center; */
+}
+
+/* Media for contact form */
+@media only screen and (max-width: 600px) {
+.contactForm{
+    width: 100%;
+width: 50vw;
+}
+}
+
+.contactForm .contactFormInput{
+height: 2rem;
+
+width: 90%;
+}
+
+
+
+.contactFormMessage{
+    width: 90%;
+}
+
+.contactForm .contactFormInput:focus, .contactFormMessage:focus{
+outline: none;
+}
+.contactFormLabel{
+    display: block;
+    margin-bottom: 1rem;
+}
+.containerFooter{
+    grid-area: theFooter;
+    width: 100%;
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+}
+
+/* SUCCESS SENDED MESSAGE */
+
+.sentSucceed{
+    color: white;
+    line-height: 3;
+    padding: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.7) 0px 30px 60px -30px, rgb(248, 249, 251) 0px -2px 6px 0px inset;
+}
+
+.sentSucceed button{
+    margin: 0 auto;
+    display: block;
+    font-size: clamp(16px, 1.3vw, 28px) ;
+
+  width: 10em;
+    height: 1.6em;
+    border: none;
+    background-color: green !important;
+    border-radius: 2em;
+    transition: 400ms;
+    color: white;
+}
+
+/* BUTTON */
+.containerFooter button, .containerBody button{
+    display: block;
+    font-size: clamp(16px, 1.3vw, 28px) ;
+
+  width: 10em;
+    height: 1.6em;
+    border: none;
+    background-color: rgb(177, 105, 246);
+    border-radius: 2em;
+    transition: 400ms;
+    color: white;
+}
+
+.containerFooter button:hover, .containerBody button:hover{
+    opacity: 0.7;
+}

@@ -1,0 +1,124 @@
+article.rewardContainer{
+    max-width: 90vw;
+    min-height: 85vh;
+    display: grid;
+    grid-template-areas: 
+    'theBody theBody theBody theBody theBody'
+    'theFooter theFooter theFooter theFooter theFooter';
+    font-size: clamp(16px, 1.4vw, 28px) ;
+
+}
+
+
+
+section.theBodyReward{
+    min-height: 70vh;
+    grid-area: theBody;
+    /* outline: 1px solid red; */
+    display: grid;
+   grid-template-areas: 
+    'head '
+    'reward ';
+    row-gap: 1vh;
+}
+
+
+
+.theBodyReward h1{
+    min-height:4vh ;
+    grid-area: head;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1rem 0;
+    box-shadow:5px 5px 10px black;
+    filter:drop-shadow(5px 5px 10px black);
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 5rem; */
+}
+
+
+section.reward{
+   grid-area: reward;
+   min-height: 65vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: unset;
+    row-gap: 1rem;
+    /* outline: 1px solid blue; */
+    
+}
+
+.rewardBox{
+
+   width: 20rem;
+   height: 30rem;
+   padding:1rem;
+   /* From https://css.glass */
+background: rgba(255, 255, 255, 0.13);
+border-radius: 16px;
+box-shadow: 10px 15px 1px rgba(0, 0, 0, 0.5);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+line-height: 1.5;
+
+}
+
+
+
+p.rewardBoxHeader{
+background-color: goldenrod;
+width: 45px;
+height: 45px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: black;
+font-size: 2.5rem;
+margin: 0 auto;
+}
+
+
+section.btnContainerReward{
+    min-height: 10vh;
+    grid-area: theFooter;
+    display: flex;
+    align-items: center;
+}
+
+.btnContainerReward button, .rewardContainer button{
+    display: block;
+    font-size: clamp(16px, 1.3vw, 28px) ;
+    
+    width: 10em;
+    height: 1.8em;
+    border: none;
+    background-color: rgb(177, 105, 246);
+    border-radius: 2em;
+    transition: 400ms;
+    color: white;
+}
+
+.rewardBox button{
+    font-size: 2.1rem;
+    width: 7em;
+    background-color: rgb(171, 127, 17);
+}
+
+.cv{
+    text-decoration: none;
+    color: white;
+}
+
+.btnContainerReward button:hover, .rewardContainer button:hover, .cv:hover{
+    opacity: 0.7;
+}

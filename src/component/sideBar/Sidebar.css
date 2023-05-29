@@ -1,0 +1,136 @@
+/* @use '../../styles/mixins';
+@import '../../styles/variables';
+// @include mixins.color;
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap'); */
+:root{
+    font-size: 62.5%;
+}
+
+
+.theSideBarContainer{
+    min-width: 10vw;
+    height: 100%;
+    padding-left: 10%;
+    background-color: black;
+    color: white;
+    padding-left: 1vw;
+    display: grid;
+    grid-template-rows: 5% 75% 20%;
+    grid-template-areas:
+    'logo'
+    'navigation'
+    'footer'
+    ;
+   /* border-right: 10px solid rgb(14, 14, 88);; */
+}
+
+/* HEADER CONTAINER */
+.theSideBarContainer div{
+    grid-area: logo;
+    padding-top: 6px;
+
+     /* outline: 1px solid red; */
+}
+
+.theSideBarContainer .title{
+    /* font-size: clamp(16px, 1.6vw, 28px) ; */
+
+    font-size: clamp(18px, 2.5vw , 2rem);
+    text-align: left;
+    font-weight: bold;
+    text-decoration: none;
+    color: White;
+}
+
+
+/*NAVIGATION CONTAINER */
+
+.theSideBarContainer nav{
+    grid-template-columns: navigation;
+    
+    /* // outline: 1px solid red; */
+
+}
+
+
+.theSideBarContainer ul.navListContainer{
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+padding-top: 3vh;
+font-size: clamp(16px, 1.4vw, 28px) ;
+
+}
+
+.theSideBarContainer ul.navListContainer > .navigationLink{
+    margin: 5% 0 ;
+    padding: 5px 0;
+    text-decoration: none;
+    color: White;
+    transition: 400ms;
+}
+
+.theSideBarContainer ul.navListContainer > .navigationLink:hover{
+    text-decoration: underline;
+   transform: translateY(-5px);
+
+    }
+
+
+
+.gameNavLinks {
+    font-size: clamp(14px, 1.2vw, 28px) ;
+}
+
+/* ACTIVE NAVLINK */
+
+.active{
+margin-left: 80px;
+background-color: rgb(14, 14, 88);
+transform: translateX(5px);
+animation: activeBottomBorder 600ms ease-in ;
+font-weight: bold;
+}
+
+@keyframes activeBottomBorder {
+   0% {background-color: black; width: 0%; border-right: 3px solid rgb(153, 7, 153);}
+   10% {background-color: rgba(0, 0, 0, 0.9); width: 10%; border-right: 3px solid rgb(153, 7, 153);}
+   20% {background-color: rgba(14, 14, 88, 0.6); width: 20%; border-right: 3px solid rgb(153, 7, 153);}
+   30% {background-color: rgba(14, 14, 88, 0.3); width: 30%; border-right: 3px solid rgb(153, 7, 153);}
+   40% {background-color: rgba(14, 14, 88, 0.1); width: 40%; border-right: 3px solid rgb(153, 7, 153);}
+   50% {background-color: rgba(14, 14, 88, 0.1); width: 50%; border-right: 3px solid rgb(153, 7, 153);}
+   60% {background-color: rgba(14, 14, 88, 0.3); width: 60%; border-right: 3px solid rgb(153, 7, 153);}
+   70% {background-color: rgba(14, 14, 88, 0.5); width: 70%; border-right: 3px solid rgb(153, 7, 153);}
+   80% {background-color: rgba(14, 14, 88, 0.6); width: 80%; border-right: 3px solid rgb(153, 7, 153);}
+   90% {background-color: rgba(14, 14, 88, 0.9); width: 90%; border-right: 3px solid rgb(153, 7, 153);}
+   100% {background-color: rgb(14, 14, 88); width: 100%; border-left-color: rgb(14, 14, 88);}
+
+  }
+
+
+/* FOOTER CONTAINER */
+
+.theSideBarContainer footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* // outline: 1px solid red; */
+
+}
+
+.theSideBarContainer footer a{
+    font-size:1.6rem;
+    text-decoration: none;
+    color: white;
+    font-size: clamp(14px, 1.3vw, 26px) ;
+    transition: 400ms;
+}
+
+
+.theSideBarContainer footer a:hover{
+   text-decoration: underline;
+   transform: translateY(-5px);
+}

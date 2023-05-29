@@ -1,0 +1,64 @@
+article.aboutMeContainer{
+    max-width: 90vw;
+   min-height: 85vh;
+    display: grid;
+    grid-template-areas: 
+    'aboutMe'
+    'btns';
+    font-size: clamp(16px, 1.4vw, 28px) ;
+
+}
+
+.textAboutMe{
+    max-width: 90vw;
+    min-height: 60vh;
+    grid-area: aboutMe;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+}
+
+
+
+/* BUTTON CONTAINER */
+
+.btnContainer{
+    width: fit-content;
+    height: 25vh;
+    grid-area: btns;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+    margin: 0 auto;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+
+/* BUTTON */
+.aboutMeContainer button{
+    display: block;
+    font-size: clamp(16px, 1.3vw, 28px) ;
+   
+    width: 10em;
+    height: 1.6em;
+    border: none;
+    background-color: goldenrod;
+
+    border-radius: 2em;
+    transition: 400ms;
+    color: white;
+   
+        
+}
+
+.aboutMeContainer button:hover{
+    opacity: 0.7;
+}
+
+.links{
+    text-decoration: none;
+}

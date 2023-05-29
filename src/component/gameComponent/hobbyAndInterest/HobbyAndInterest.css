@@ -1,0 +1,199 @@
+article.hobbyAndInterestContainer{
+    max-width: 90vw;
+    min-height: 85vh;
+    display: grid;
+    grid-template-areas: 
+    'theBody theBody theBody theBody theBody'
+    'theFooter theFooter theFooter theFooter theFooter';
+    font-size: clamp(16px, 1.4vw, 28px) ;
+
+}
+
+
+section.theBodyHobbyAndInterest{
+    max-width: 90vw;
+    min-height: 65vh;
+    grid-area: theBody;
+    display: grid;
+    grid-template-areas:
+    
+     'introduction'
+     'options'
+     'btn'
+    ;
+}
+
+
+
+
+/* Instruction container. It contains all the game instruction and question for skill section*/
+section.hobbiesInstructionAndQuestionSection{
+    width: 100%;
+    grid-area: introduction;
+    min-height: 25vh;
+    display: flex;
+    align-items: center;
+  
+}
+
+.hobbiesInstructions{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    /* outline: 1px solid green; */
+}
+
+/* Description of hobbies */
+.hobbiesDescription{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.descriptionBox{
+min-height: 80%;
+line-height: 2;
+padding-left: 2rem;
+padding-right: 2rem;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+    justify-content: center;
+    align-items:center;
+outline: 1px solid black;
+}
+
+.hobbiesAndInterestConclusion{
+    line-height: 1.5;
+}
+
+
+.space{
+    margin-bottom: 20px;
+}
+/* .hobbiesResponseAndOptionsContainer and .description */
+ .descriptionBox{
+    border-radius: 5px;
+    box-shadow:5px 5px 10px black;
+    filter:drop-shadow(5px 5px 10px black);
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* Response and options container contain all the response options */
+
+section.hobbiesResponseAndOptionsContainer {
+    width: 100%;
+    grid-area: options;
+   min-height: 35vh;
+   display: flex;
+   align-items: center;
+
+}
+
+
+
+section.hobbiesResponseOptionsBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 5% auto;
+    gap: 20px;
+}
+
+.treasureContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* outline: 1px solid red; */
+}
+.treasureContainer .treasure{
+    cursor: pointer;
+    width: 6rem;
+    transition: width 300ms;
+    animation: treasure 2s ease-in-out infinite;
+}
+
+@keyframes treasure {
+    0% {width: 8rem; height: auto;}
+    10%{width: 8.15rem; height: auto;}
+    20%{width: 8.3rem; height: auto;}
+    30%{width: 8.45rem; height: auto;}
+    40%{width: 8.6rem; height: auto;}
+    50%{width: 8.75rem; height: auto;}
+    60%{width: 8.6rem; height: auto;}
+    70%{width: 8.45rem; height: auto;}
+    80%{width: 8.3rem; height: auto;}
+    90%{width: 8.15rem; height: auto;}
+    100% {width: 8rem; height: auto;}
+  }
+
+.hobbies{
+    min-width: 150px;
+    max-width: 50%;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: black;
+    text-align: center;
+   border: 3px solid white;
+   cursor: pointer;
+   transition: 300ms;
+}
+
+
+/* The check answer btn container */
+
+.hobbiesCheckButtonContainer{
+    grid-area: btn;
+    /* background-color: aqua; */
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+
+    }
+
+
+
+
+section.btnContainerHobbyAndInterest{
+    grid-area: theFooter;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* Style for all the button */
+
+.hobbyAndInterestContainer button{
+    display: block;
+    font-size: clamp(16px, 1.3vw, 28px) ;
+
+    width: 10em;
+    height: 1.6em;
+    border: none;
+    background-color: rgb(177, 105, 246);
+    border-radius: 2em;
+    transition: 400ms;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+
+
+.hobbyAndInterestContainer button:hover{
+    opacity: 0.7;
+}
+

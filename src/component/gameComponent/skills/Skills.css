@@ -1,0 +1,260 @@
+article.skillContainer{
+    max-width: 90vw;
+   min-height: 85vh;
+    display: grid;
+    grid-template-areas: 
+    'theBody theBody theBody theBody theBody'
+    'theFooter theFooter theFooter theFooter theFooter';
+    font-size: clamp(16px, 1.4vw, 28px) ;
+
+}
+
+
+/* Body of skills  container  we give it a display grid to 
+fixed the layout of his three part 
+(skillsHeaderTitle, instructionAndQuestionSection, responseOptionsContainer)*/
+section.theBodySkills{
+    max-width: 90vw;
+    min-height: 75vh;
+    grid-area: theBody;
+    display: grid;
+    grid-template-areas:
+   
+     'introduction'
+     'options'
+     'error'
+    ;
+    /* background-color:antiquewhite; */
+    /* outline: 1px solid red; */
+ 
+}
+
+
+
+/* Instruction container. It contains all the game instruction and question for skill section*/
+section.instructionAndQuestionSection{
+    width: 85%;
+    grid-area: introduction;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+}
+
+.technicalSkillsInstructions, .softSkillsInstructions, .conclusion, .languagesInstructions{
+    line-height: 1.5;
+}
+
+
+section.instructionAndQuestionSection .space{
+    margin-bottom: 20px;
+}
+/* Response and options container contain all the response options */
+
+section.responseAndOptionsContainer {
+    width: 100%;
+    grid-area: options;
+   min-height: 35vh;
+   
+}
+
+
+
+section.responseOptionsBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+     gap: 20px;
+    margin: 5% auto;
+}
+
+
+section.responseOptionsBox p{
+    min-width: 150px;
+    max-width: 50%;
+    padding: 10px;
+    background-color: black;
+    text-align: center;
+   outline: 3px solid white;
+   transition: 300ms;
+   cursor: pointer;
+}
+
+.responseOptionsBoxLogos {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'stock bag';
+    row-gap: 10px;
+   
+}
+
+.stock{
+    grid-area: stock;
+   
+    margin-right: 20px;
+}
+
+.bag{
+    grid-area: bag;
+ 
+
+}
+
+
+.stock, .bag {
+    background: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+   padding-left: .8rem;
+   padding-top: .5rem;
+  
+}
+
+
+ .stockBody, .technicalBagBody{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stock h3, .bag h3{
+color: magenta!important;
+font-weight: bold;
+margin-bottom: 0.5rem;
+}
+
+
+.responseOptionsBoxLogos h3{
+    color: black;
+}
+
+
+/* ............................................. Technical skills ...........................................*/
+.responseAndOptionsContainer  figure.technicalSkillBox{
+      width: 50px;
+      height: 70px;
+    padding: 10px;
+    text-align: center;
+   border: none;
+   background-color: white;
+   transition: 300ms;
+   margin-right: 1rem;
+   margin-bottom: 1rem;
+  
+}
+
+/* ............................................. language skills ...........................................*/
+
+.languageSkillBox{
+    width: 130px;
+    height: fit-content;
+    text-align: center;
+}
+
+.languageSkillBox figcaption{
+    color:white;
+    font-size: 1rem;
+}
+
+.languagesImg {
+    width: 100px;
+    height: 100px;
+    
+}
+
+.skillsImg {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+figcaption{
+    color: black;
+    font-size: 1.1rem;
+}
+
+.conclusionImg{
+    width: 6rem;
+    height: auto;
+}
+
+.conclusionAnimation{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+}
+
+
+
+/* The check answer btn container */
+
+.errorSkillsContainer{
+grid-area: error;
+height: 5vh;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+}
+
+
+
+.errorMessageSkills{
+    color: red;
+    font-size: clamp(16px, 1.2vw, 28px) ;
+
+    margin: 0 auto;
+}
+
+
+
+
+section.btnContainerSkills{
+    height: 10vh;
+    grid-area: theFooter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+/* Style for all the button */
+.skillContainer button{
+    display: block;
+    font-size: clamp(16px, 1.3vw, 28px) ;
+
+    width: 10em;
+    height: 1.6em;
+    border: none;
+    background-color: rgb(177, 105, 246);
+    border-radius: 2em;
+    transition: 400ms;
+    color: white;
+    font-weight: bold;
+        
+}
+
+.skillContainer button:hover{
+    opacity: 0.7;
+}
+
+
+/* For selecting soft skill */
+
+.selected{
+    outline:4px solid green !important;
+    
+}
+
+/* Languages */
+

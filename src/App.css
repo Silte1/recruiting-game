@@ -1,5 +1,67 @@
-.App {
-  text-align: center;
+.App{
+  min-width: 280px;
+  display: grid;
+  grid-template-columns: 10vw 90vw;
+  grid-template-rows: 15vh minmax(85vh, max-content);
+   grid-template-areas:
+  'mySideBar myAppHeader '
+  'mySideBar pages '
+  ;
+  background: url("../public/gradienta-m_7p45JfXQo-unsplash.jpg") center /cover no-repeat ;
+  /* border: 1px solid red;  */
+}
+
+@media only screen and (max-width: 630px) {
+ .App{
+      grid-template-columns: 20vw 80vw;
+  }
+}
+
+/* SIDEBAR */
+
+.side{
+  grid-area: mySideBar;
+  /* border: 1px solid orange; */
 }
 
 
+/* APP HEADER */
+.appHeader{
+ grid-area: myAppHeader;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerBar{
+  width: 30%;
+  height: 1em;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #8e04a9, #de6795, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+      animation: gradient 5s ease infinite;
+}
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* APP BODY */
+.appBody{
+  grid-area: pages;
+  margin: 0 5%;
+  
+}
+
+
+/* P */
+p{
+  color: white;
+}
