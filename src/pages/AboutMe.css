@@ -6,7 +6,7 @@ article.aboutMeContainer{
     'aboutMe'
     'btns';
     font-size: clamp(16px, 1.4vw, 28px) ;
-
+    
 }
 
 .textAboutMe{
@@ -14,10 +14,17 @@ article.aboutMeContainer{
     min-height: 60vh;
     grid-area: aboutMe;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    color: white;
-    align-items: center;
+      align-items: center;
     line-height: 2;
+}
+
+.textAboutMe p{
+    background-color: rgba(0, 0, 0, 0.364);
+    padding:0 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 
