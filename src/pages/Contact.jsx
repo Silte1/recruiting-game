@@ -7,6 +7,7 @@ import emailjs from "@emailjs/browser"
 import "./Contact.css"
 
 
+
 export default function Kontakt () {
     const navigate = useNavigate()
     const [email, setEmail] = useState("")
@@ -21,7 +22,7 @@ export default function Kontakt () {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_uags4zm', 'template_pjscs85', form.current, 'mCvbtzmKAhj6jkJFp')
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
             .then((result) => {
                 console.log(result.text);
                 if (result.text === "OK") {
