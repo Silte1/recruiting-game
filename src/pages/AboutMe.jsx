@@ -9,17 +9,14 @@ export default function AboutMe () {
         <article className='aboutMeContainer'>
             <section className='textAboutMe'>
                 <p>
-                    My name is Etienne Silué and I was born in Korhogo in 1995. Korhogo is a city in the northern Côte d'Ivoire, which lies in West Africa. I went to school in that city and did a Bachelor's degree after that.
-
-                    In 2021 I moved to Germany to be married. I wanted to use the opportunity of this new beginning to start my career in the field of activity of my dreams - web and software development.
-
-                    I used the past months to improve my German and was happy to be able to start the professional training with DCI to become a web and software developer.
+                    Ich heiße Etienne Silué und bin 1995 in Korhogo, einer Stadt im Norden der Elfenbeinküste (Côte d'Ivoire, Westafrika), geboren. Dort ging ich zur Schule und besuchte anschließend die Universität, an der ich mein Bachelor-Studium absolvierte.
+                    2021 heiratete ich und zog deshalb nach Deutschland. Ich wollte die Gelegenheit dieses Neubeginns nutzen, um die berufliche Karriere im Bereich meiner Träume zu starten: Web- und Softwareentwicklung.
+                    Die ersten Monate in Deutschland nutzte ich, um meine Deutsch-Kenntnise zu verbessern und freute mich, im Sommer 2022 eine Umschulung mit DCI (Digital Career Institute) beginnen zu können, um ein Web- und Softwareentwickler zu werden.
+                    Nun bin ich auf der Suche nach einer Arbeitsstelle und freue mich auf diese neue Herausforderung.
                 </p>
                 <p>
-                    Das kann ich bereits:
-                    Frontend (UI/UX) design mit html, css, scss, bootstrap, Javascript, React js;
-                    Backend mit Node.js, express js, mongodb(compass, Atlas) / MySql;
-                    Versionsverwaltung mit Github.
+                    Diese Fähigkeiten bringe ich bereits mit:
+                    Frontend (UI/UX) design mit html, css, scss, bootstrap, Javascript, React js; Backend mit Node.js, express js, mongodb(compass, Atlas) / MySql; Versionsverwaltung mit Github.
                 </p>
             </section>
             <div className='btnContainer'>
